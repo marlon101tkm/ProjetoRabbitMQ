@@ -1,0 +1,16 @@
+workqueues\NewTask.class
+routing\EmitLogDirect.class
+topics\ReceiveLogsTopic.class
+com\mycompany\projetorabbitmq\TelaConf.class
+com\mycompany\projetorabbitmq\Notificado.class
+com\mycompany\projetorabbitmq\Sensor$1.class
+workqueues\Worker.class
+helloword\Recv.class
+pusblishSubcribe\EmitLog.class
+helloword\Send.class
+topics\EmitLogTopic.class
+com\mycompany\projetorabbitmq\Notificado$1.class
+com\mycompany\projetorabbitmq\Sensor.class
+com\mycompany\projetorabbitmq\TelaConf$1.class
+routing\ReceiveLogsDirect.class
+pusblishSubcribe\ReceiveLogs.class
