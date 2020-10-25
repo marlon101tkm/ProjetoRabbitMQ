@@ -13,7 +13,7 @@ import com.rabbitmq.client.MessageProperties;
 public class EmitLogTopic {
 
     private static final String EXCHANGE_NAME = "topic_logs";
-    private static final String[] topicos = {"lazy.brown.fox", "coeio"};
+    private static final String[] topicos = {"lazy", "coeio"};
 
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
@@ -21,7 +21,7 @@ public class EmitLogTopic {
         try ( Connection connection = factory.newConnection();  Channel channel = connection.createChannel()) {
 
             channel.exchangeDeclare(EXCHANGE_NAME, "topic");
-           
+//           
 
             String routingKey = getRouting(topicos);
             String message = getMessage(topicos);

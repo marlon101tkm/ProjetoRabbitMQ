@@ -3,10 +3,16 @@ routing\EmitLogDirect.class
 topics\ReceiveLogsTopic.class
 com\mycompany\projetorabbitmq\TelaConf.class
 com\mycompany\projetorabbitmq\Notificado.class
+com\mycompany\projetorabbitmq\TelaConf$2.class
+com\mycompany\projetorabbitmq\Notificado$2.class
 com\mycompany\projetorabbitmq\Sensor$1.class
+com\mycompany\projetorabbitmq\TelaConf$3.class
 workqueues\Worker.class
+com\mycompany\projetorabbitmq\Sensor$2.class
 helloword\Recv.class
 pusblishSubcribe\EmitLog.class
+com\mycompany\projetorabbitmq\TelaConf$5.class
+com\mycompany\projetorabbitmq\TelaConf$4.class
 helloword\Send.class
 topics\EmitLogTopic.class
 com\mycompany\projetorabbitmq\Notificado$1.class

@@ -27,20 +27,43 @@ public class TelaConf extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        buracos = new javax.swing.JButton();
+        congest = new javax.swing.JButton();
+        radares = new javax.swing.JButton();
+        obras = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText(" Monitor Buracos na Pista");
+        buracos.setText(" Monitor Buracos na Pista");
+        buracos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buracosActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Monitor Congestionamento");
+        congest.setText("Monitor Congestionamento");
+        congest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                congestActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("Monitor Radares");
+        radares.setText("Monitor Radares");
+        radares.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radaresActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("Obras na Pista");
+        obras.setText("Obras na Pista");
+        obras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                obrasActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Monitores ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -49,28 +72,72 @@ public class TelaConf extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(73, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(buracos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(congest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(radares, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(obras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(81, 81, 81))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(134, 134, 134)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(127, 127, 127)
-                .addComponent(jButton1)
+                .addGap(83, 83, 83)
+                .addComponent(jLabel1)
+                .addGap(30, 30, 30)
+                .addComponent(buracos)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(congest)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(radares)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
+                .addComponent(obras)
                 .addContainerGap(98, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buracosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buracosActionPerformed
+      Sensor sensor = new Sensor();
+       sensor.setTipoMsg("buracos");
+       sensor.setRoutingKey("buracos");
+       sensor.getNomeSensor().setText("Indice de Buracos");
+       sensor.setVisible(true);
+       buracos.setEnabled(false);
+       
+    }//GEN-LAST:event_buracosActionPerformed
+
+    private void congestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_congestActionPerformed
+      Sensor sensor = new Sensor();  
+      sensor.setTipoMsg("congest");
+       sensor.setRoutingKey("congest");
+      sensor.getNomeSensor().setText("Indice de Cogestionamento");
+      sensor.setVisible(true);
+      congest.setEnabled(false);
+    }//GEN-LAST:event_congestActionPerformed
+
+    private void radaresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radaresActionPerformed
+        Sensor sensor = new Sensor();
+        sensor.setTipoMsg("radares");
+         sensor.setRoutingKey("radares");
+        sensor.getNomeSensor().setText("Concentração de Radares");
+        sensor.setVisible(true);
+        radares.setEnabled(false);
+    }//GEN-LAST:event_radaresActionPerformed
+
+    private void obrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_obrasActionPerformed
+        Sensor sensor = new Sensor();
+        sensor.setTipoMsg("obras");
+         sensor.setRoutingKey("obras");
+        
+        sensor.getNomeSensor().setText("Obras na Pista");
+        sensor.setVisible(true);
+        obras.setEnabled(false);
+    }//GEN-LAST:event_obrasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -108,9 +175,10 @@ public class TelaConf extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton buracos;
+    private javax.swing.JButton congest;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton obras;
+    private javax.swing.JButton radares;
     // End of variables declaration//GEN-END:variables
 }

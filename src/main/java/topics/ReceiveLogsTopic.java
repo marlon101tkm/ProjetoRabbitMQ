@@ -12,7 +12,7 @@ import com.rabbitmq.client.*;
 public class ReceiveLogsTopic {
 
     private static final String EXCHANGE_NAME = "topic_logs";
-    private static final String[] topicos = {"#"};//"*.brown.*"};
+    private static final String[] topicos = {"lazy"};
 
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
